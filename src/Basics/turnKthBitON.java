@@ -1,5 +1,7 @@
 package Basics;
 
+import java.util.Arrays;
+
 public class turnKthBitON {
 
 	public static void main(String[] args) {
@@ -12,6 +14,8 @@ public class turnKthBitON {
 	public static int turnOn(int number, int k) {
 		int mask=1 << k;
 		return number ^ mask;
+		
+		
 	}
 
 }
