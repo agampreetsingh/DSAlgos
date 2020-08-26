@@ -27,9 +27,7 @@ public class GoldMine {
 				}
 			}
 		}
-		
-		
-		
+
 		int max = dp[0][0];
 		for (int i = 0; i < dp.length; i++) {
 			if (dp[i][0] > max) {
