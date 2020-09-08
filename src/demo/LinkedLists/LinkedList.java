@@ -89,26 +89,60 @@ public class LinkedList implements List {
 	// O(1)
 	@Override
 	public Node removeFirst() {
-		// TODO Auto-generated method stub
-		return null;
+		Node iteratorNode= head;
+		head = iteratorNode.getNext();
+		return head;
 	}
 
 	// O(1)
 	@Override
 	public Node removeLast() {
-		// TODO Auto-generated method stub
-		return null;
+		Node prev= null;
+		Node iteratorNode = head;
+		
+		while(iteratorNode.getNext() != null) {
+			prev= iteratorNode;
+			iteratorNode = iteratorNode.getNext();
+		}
+		prev.setNext(null);  
+		return head;
 	}
 
 	// O(n)
 	@Override
-	public Node removeAt(int index) {
-		// TODO Auto-generated method stub
-		return null;
+	public Node removeAt(int index) throws Exception {
+		if(this.size<index) {
+			throw new Exception("LinkedList Index Out Of Bounds: "+ index);
+		}
+		if(index<0) {
+			throw new Exception("Invalid Index: "+ index);
+		}
+		if(index ==0){
+			return removeFirst();
+		}
+		if(this.size == index) {
+			return removeLast();
+		}
+		Node iteratorNode = head;
+		
+		for(int i =1; iteratorNode != null && i<index -1 ;i++)
+		{
+			iteratorNode = iteratorNode.getNext();
+		}
+		Node nextAdd = iteratorNode.getNext().getNext();
+		iteratorNode.setNext(nextAdd);
+		return head;
 	}
 	
 	@Override
 	public void recDisplay() {
-		// TODO Auto-generated method stub
+		
+		reccDisplay(tail);
+		
+	}
+
+	private void reccDisplay(Node tail) {
+		
+		
 	}
 }

@@ -8,6 +8,6 @@ public interface List {
 	int getSize();
 	Node removeFirst();
 	Node removeLast();
-	Node removeAt(int index);
+	Node removeAt(int index) throws Exception;
 	void recDisplay();
 }

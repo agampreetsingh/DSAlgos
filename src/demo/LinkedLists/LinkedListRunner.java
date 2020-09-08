@@ -15,6 +15,19 @@ public class LinkedListRunner {
 		ll.display();
 		ll.addAtIndex(5, 6);
 		ll.display();
+		System.out.println();
+		ll.removeFirst();
+		System.out.println();
+		ll.display();
+		ll.removeLast();
+		System.out.println();
+		ll.display();
+		ll.removeAt(4);
+		System.out.println();
+		ll.display();
+		ll.removeAt(2);
+		System.out.println();
+		ll.display();
 	}
 
 }
