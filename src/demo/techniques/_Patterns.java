@@ -1,6 +1,6 @@
 package demo.techniques;
 
-public class Patterns {
+public class _Patterns {
 
 	public static void main(String[] args) {
 		int n = 5;
@@ -11,7 +11,7 @@ public class Patterns {
 		
 		int a = 10;
 		int b = 20;
-		
+		System.out.println("a@n".matches(".@."));
 		a = a + b;
 		b = a - b;
 		a = a -b;
